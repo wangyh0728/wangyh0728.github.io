@@ -1,4 +1,4 @@
 <head>
 <title><?php echo $_GET['res'];?></title>
 </head>
-<?php echo $_GET['res'];?>s
+<?php var_dump($_GET);?>
